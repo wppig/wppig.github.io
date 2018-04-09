@@ -4,9 +4,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 	<meta charset="utf-8" />
-   
+    <style type="text/css">
+        * {
+        margin:0px auto ;
+        padding:0px;
+        }
+        p {
+            font-size:400%;
+        text-align:center;
+        }
+        body {
+        background-color:#00ffff;
+        }
+        #Time_center {
+            font-size:20px;
+            height:200px;
+        border:1px solid red;
+        }
+        #litte {
+        font-size:40px;
+        }
+    </style>
+    <script type="text/javascript">
+    window.onload=function () {
+        setInterval(function () {
+                var date = new Date;
+                var datediv = document.getElementById("time");
+                datediv.innerHTML =    date.getHours() + "时-" + date.getMinutes() + "分-" + date.getSeconds()+"秒";
+            },1000);
+    };
+        </script>
 </head>
 <body>
-	<h1 style="font-size:500%,text-align:center"  >这是许文雪的个人网站，待建设！</h1>
+   <div id="header">
+       <p>Welcome My Home！</p>
+	   <h1 style="font-size:500%,text-align:center"  >这是许文雪的个人网站，待建设！</h1>
+       <p>我叫许文雪，欢迎来到的我的博客</p>
+      <div id="Time_center"><p>现在是北京时间：</p><p id="time"></p></div> 
+      <p id="litte">很高兴你能来！希望我自己能够努力充实自己，找到自己的目标。</p>
+   </div>
 </body>
 </html>
+
